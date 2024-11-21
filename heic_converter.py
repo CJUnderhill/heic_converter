@@ -3,6 +3,11 @@ from PIL import Image
 import pillow_heif
 import zipfile
 import shutil
+import argparse
+
+parser = argparse.ArgumentParser(description="HEIC to jpg converter")
+parser.add_argument('--dir')
+args = parser.parse_args()
 
 def heic_to_jpg(heic_path, jpg_path):
     # Open HEIC file using pillow_heif
@@ -65,4 +70,4 @@ def process_photos(directory):
     convert_and_zip(directory)
 
 # Example usage
-process_photos('C:\Users\Chad\Downloads\chicago-wv')
+process_photos(args.dir)
