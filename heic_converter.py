@@ -65,4 +65,4 @@ def process_photos(directory):
     convert_and_zip(directory)
 
 # Example usage
-process_photos('/Users/chadunderhill/Downloads')
+process_photos('C:\Users\Chad\Downloads\chicago-wv')
